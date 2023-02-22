@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LvX-9q-BBr">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="ePB-6V-T4M">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" title="Home" id="B7c-bj-mKJ" customClass="MainVC" customModule="Build24" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wFF-nq-xe0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="851"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <inset key="scrollIndicatorInsets" minX="20" minY="0.0" maxX="20" maxY="10"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qea-if-hc8">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="c9P-Iy-x7j">
+                            <rect key="frame" x="0.0" y="-88" width="393" height="851"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXB-du-eV2">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="851"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-Ka-MaE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
+                                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="105" id="YO9-9l-Lk8"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="0Kz-Ka-MaE" firstAttribute="leading" secondItem="yXB-du-eV2" secondAttribute="leading" id="4fv-tY-nh7"/>
+                                        <constraint firstItem="0Kz-Ka-MaE" firstAttribute="top" secondItem="yXB-du-eV2" secondAttribute="top" id="Vm8-GD-bgL"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Kz-Ka-MaE" secondAttribute="trailing" id="uc4-KB-UL2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="yXB-du-eV2" firstAttribute="leading" secondItem="c9P-Iy-x7j" secondAttribute="leading" id="Gzk-J5-cMF"/>
+                                <constraint firstAttribute="trailing" secondItem="yXB-du-eV2" secondAttribute="trailing" id="MBf-6j-vGU"/>
+                                <constraint firstItem="yXB-du-eV2" firstAttribute="top" secondItem="c9P-Iy-x7j" secondAttribute="top" id="fGY-Od-8hg"/>
+                                <constraint firstAttribute="bottom" secondItem="yXB-du-eV2" secondAttribute="bottom" id="wle-Ti-7Bw"/>
+                            </constraints>
+                        </view>
+                        <cells/>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="y2k-oN-rMo">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Q2O-Yv-YnE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="71y-Vv-D61">
+                                <rect key="frame" x="16" y="9.3333333333333339" width="25.666666666666671" height="25.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="changeLanguage:" destination="B7c-bj-mKJ" eventType="touchUpInside" id="eNN-wZ-cjj"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="changeLanguage:" destination="B7c-bj-mKJ" id="qaL-Pa-jTA"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem width="100" style="plain" id="GOH-km-neN">
+                                <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vxd-id-bk9">
+                                    <rect key="frame" x="327.33333333333331" y="5" width="49.666666666666686" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="magnifyingglass" catalog="system"/>
+                                    <connections>
+                                        <action selector="SearchButton:" destination="B7c-bj-mKJ" eventType="touchUpInside" id="EFj-7L-UZi"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="Search:" destination="B7c-bj-mKJ" id="4kv-Yv-iwL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem width="100" style="plain" id="cBs-vR-BJU">
+                                <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="k5b-n3-3Pc">
+                                    <rect key="frame" x="270.33333333333331" y="5" width="49" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="1" green="0.96448204859999997" blue="0.9910274187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="qrcode" catalog="system"/>
+                                    <connections>
+                                        <action selector="QR:" destination="B7c-bj-mKJ" eventType="touchUpInside" id="DbU-9K-4VV"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="QR:" destination="B7c-bj-mKJ" id="LoV-KP-Dvt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <size key="freeformSize" width="393" height="851"/>
+                    <connections>
+                        <outlet property="collectionView" destination="wFF-nq-xe0" id="Q7d-Dr-MST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvI-ZD-Ixq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326.8115942028987" y="364.62053571428572"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="718-Kz-GcP">
+            <objects>
+                <tabBarController id="LvX-9q-BBr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wn7-S9-qZi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IbA-MM-Egy" kind="relationship" relationship="viewControllers" id="9h3-3K-hYL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTV-QT-D5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1176" y="-477"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="64q-KA-hBg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTz-Se-cdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IbA-MM-Egy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" badgeValue="22" id="3um-pS-Zjk" userLabel="home">
+                        <inset key="imageInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                        <inset key="landscapeImageInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" semanticContentAttribute="playback" backIndicatorImage="arrow.forward.circle.fill" catalog="system" id="9Sr-kY-Ng7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemMintColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="mxg-xa-xK8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <toolbarAppearance key="standardAppearance"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="B7c-bj-mKJ" kind="relationship" relationship="rootViewController" id="ZYl-we-naq"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-59" y="364"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.forward.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

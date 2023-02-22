@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--QR-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="QRScanVC" id="Y6W-OH-hqX" customClass="QRScanVC" customModule="Build24" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sIy-2m-0EG">
+                                <rect key="frame" x="0.0" y="768" width="393" height="51"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="3f6-C0-D9Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="tmV-jS-tel"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Scan QR code"/>
+                                    <segment title="My QR code"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segment:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Sqw-6a-h4a"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI0-Nf-j8g">
+                                <rect key="frame" x="0.0" y="150" width="393" height="549"/>
+                                <color key="backgroundColor" red="0.52499933750000005" green="1" blue="0.68794565809999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="549" id="pdK-eg-fKN"/>
+                                    <constraint firstAttribute="width" constant="393" id="rVP-Gu-TEr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="vI0-Nf-j8g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Aif-rl-KdU"/>
+                            <constraint firstItem="sIy-2m-0EG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DeW-OP-g7u"/>
+                            <constraint firstItem="sIy-2m-0EG" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="XN4-Ut-goh"/>
+                            <constraint firstItem="sIy-2m-0EG" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="h1j-kQ-2Yl"/>
+                            <constraint firstItem="vI0-Nf-j8g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="47" id="tkS-aC-7vz"/>
+                            <constraint firstItem="vI0-Nf-j8g" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="x0g-Dt-v0p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR" id="HjK-7k-4Vi">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Nc9-wB-GOa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="w5d-sq-rJG">
+                                <rect key="frame" x="322.33333333333331" y="5" width="54.666666666666686" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="photo.artframe" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="View" destination="5EZ-qb-Rvc" id="2a1-ov-sTp"/>
+                        <outlet property="ViewScreen" destination="5EZ-qb-Rvc" id="HAN-wM-dgZ"/>
+                        <outlet property="uiView" destination="vI0-Nf-j8g" id="zM2-T5-aNp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.70229007633588" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cPU-oV-FMZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="STA-ks-1sR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vEf-xg-b5D">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="N1Z-o9-UDF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9OH-vz-ZTO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.984732824427482" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
